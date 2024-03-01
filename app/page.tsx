@@ -1,9 +1,29 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
+  const [darkMenu, setDarkMenu] = useState(false);
+  const [lightMenu, setLightMenu] = useState(false);
+
   return (
     <main className={styles.main}>
+      <div
+        className={`${styles.darkVideoCover} ${
+          darkMenu ? "" : styles.darkVideoCoverHidden
+        }`}
+      >
+        <div
+          className={`${styles.contactFormWrapper} ${
+            darkMenu ? "" : styles.contactFormWrapperHidden
+          }`}
+        >
+          <ContactForm />
+        </div>
+      </div>
       <video
         src={"opnsrc.mp4"}
         autoPlay
@@ -14,7 +34,9 @@ export default function Home() {
         className={styles.video}
       />
 
-      <div className={styles.content}>
+      <div
+        className={`${styles.content} ${darkMenu ? styles.contentHidden : ""}`}
+      >
         <div className={styles.titleWrapper}>
           <div className={styles.logo}>
             <Image src="/oss.png" alt="OSS" fill />
@@ -41,7 +63,12 @@ export default function Home() {
         <div className={styles.infoWrapper}>
           <div className={styles.infoContainer}>
             <p className={styles.infoTitle}>Contact</p>
-            <div className={styles.infoLink}>Email Us &gt;</div>
+            <div
+              className={styles.infoLink}
+              onClick={() => setDarkMenu(!darkMenu)}
+            >
+              Email Us &gt;
+            </div>
             <p className={styles.infoSub}>
               Portfolio available
               <br />

@@ -13,8 +13,36 @@
   left: 0px;
   height: 100%;
   width: 100%;
+  z-index: -2;
+  object-fit: cover !important;
+}
+.darkVideoCover {
+  width: 100%;
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   object-fit: cover !important;
+  background-color: rgba(7, 7, 7, 0.6);
+  backdrop-filter: multiply;
+  transition: ease-out 400ms all;
+  backdrop-filter: blur(3px);
+}
+
+.darkVideoCoverHidden {
+  background-color: rgba(7, 7, 7, 0);
+  transition: ease-in 400ms all;
+  backdrop-filter: none;
+}
+.contactFormWrapper {
+  opacity: 1;
+  transition: opacity 0ms linear 300ms; /* Adding 300ms delay before transition */
+}
+.contactFormWrapperHidden {
+  opacity: 0;
+  transition: opacity 0ms linear 300ms; /* Adding 300ms delay before transition */
 }
 .videoPoster {
   width: 100%;
@@ -40,7 +68,77 @@
   flex-direction: column;
   gap: 11px;
   width: 100%;
+  opacity: 1;
 }
+
+.contentHidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0ms linear 300ms;
+  animation: glitch 0.3s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(12px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-12px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(30deg);
+  }
+}
+
+.contentHidden:before,
+.contentHidden:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.contentHidden:before {
+  animation: glitchTop 0.3s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(12px, -12px);
+  }
+  4%,
+  60% {
+    transform: translate(-12px, 12px);
+  }
+  62% {
+    transform: translate(78px, -6px) skew(-78deg);
+  }
+}
+
+.contentHidden:after {
+  animation: glitchBotom 0.3s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-12px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-12px, 0);
+  }
+  62% {
+    transform: translate(-132px, 30px) skew(132deg);
+  }
+}
+
 .logoTitle {
   font-weight: 600;
   font-size: 28px;
@@ -69,6 +167,7 @@
   margin-top: 2px;
   text-transform: uppercase;
 }
+
 .infoWrapper {
   font-size: 12px;
   display: flex;
@@ -121,6 +220,23 @@
 .desktopTitle {
   display: none;
 }
+.mobileButton {
+  position: fixed;
+  width: calc(100% - 24px);
+  bottom: 24px;
+  left: 12px;
+  background-color: #dedede;
+  height: 42px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace !important;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 20px -10px #fff;
+}
 
 @media screen and (min-width: 600px) {
   .content {
@@ -170,6 +286,9 @@
   }
   .infoWrapper {
     justify-content: flex-end;
-    width: 100%
+    width: 100%;
+  }
+  .mobileButton {
+    display: none;
   }
 }
