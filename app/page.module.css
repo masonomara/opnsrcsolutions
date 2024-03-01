@@ -129,12 +129,12 @@
 }
 
 .contentHidden:after {
-  animation: glitchBotom 0.3s linear 2;
+  animation: glitchBottom 0.3s linear 2;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@keyframes glitchBotom {
+@keyframes glitchBottom {
   2%,
   64% {
     transform: translate(-12px, 0);
