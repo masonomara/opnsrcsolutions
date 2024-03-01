@@ -1,0 +1,29 @@
+.formWrapper {
+  width: 100%;
+  padding: 0px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0px;
+}
+.formHeader {
+  font-family: monospace !important;
+  text-align: left;
+  font-size: 12px;
+  line-height: 115%;
+
+  text-transform: uppercase;
+}
+.formInput {
+  border-radius: 0px !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 4px 0px;
+}

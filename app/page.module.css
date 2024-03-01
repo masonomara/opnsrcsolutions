@@ -19,24 +19,33 @@
 .darkVideoCover {
   width: 100%;
   position: absolute !important;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height: 100%;
-  width: 100%;
-  z-index: -1;
+  z-index: 20;
   object-fit: cover !important;
   background-color: rgba(7, 7, 7, 0.6);
-  backdrop-filter: multiply;
-  transition: ease-out 400ms all;
   backdrop-filter: blur(3px);
+  transition: background-color 300ms ease-out, z-index 0ms linear 300ms,
+    backdrop-filter 300ms linear 0ms;
 }
-
 .darkVideoCoverHidden {
   background-color: rgba(7, 7, 7, 0);
-  transition: ease-in 400ms all;
+  transition: background-color 300ms linear 0ms;
   backdrop-filter: none;
+  z-index: -1;
 }
 .contactFormWrapper {
+  padding: 48px 12px 0px;
+  z-index: 99;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 100%;
   opacity: 1;
   transition: opacity 0ms linear 300ms; /* Adding 300ms delay before transition */
 }
@@ -75,7 +84,7 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0ms linear 300ms;
-  animation: glitch 0.3s linear infinite;
+  animation: glitch 0.3s linear 2;
 }
 
 @keyframes glitch {
@@ -100,27 +109,27 @@
 }
 
 .contentHidden:before {
-  animation: glitchTop 0.3s linear infinite;
+  animation: glitchTop 0.3s linear 2;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
 @keyframes glitchTop {
   2%,
-  64% {
+  36% {
     transform: translate(12px, -12px);
   }
   4%,
-  60% {
+  40% {
     transform: translate(-12px, 12px);
   }
-  62% {
+  38% {
     transform: translate(78px, -6px) skew(-78deg);
   }
 }
 
 .contentHidden:after {
-  animation: glitchBotom 0.3s linear infinite;
+  animation: glitchBotom 0.3s linear 2;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
