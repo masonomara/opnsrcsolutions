@@ -36,13 +36,14 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.formWrapper}>
+      <div className={styles.title}>Contact Form</div>
       <div className={styles.labelWrapper}>
         <label htmlFor="name" className={styles.formHeader}>
           Full Name*
         </label>
         <input
           type="text"
-          placeholder="John Henry Holliday"
+          placeholder="full name"
           className={styles.formInput}
           autoComplete="name"
           {...register("name", { required: true })}
@@ -54,7 +55,7 @@ const ContactForm: React.FC = () => {
         </label>
         <input
           type="email"
-          placeholder="doc@hollidaydentistry.com"
+          placeholder="email address"
           className={styles.formInput}
           autoComplete="email"
           {...register("email", { required: true })}
@@ -66,7 +67,7 @@ const ContactForm: React.FC = () => {
         </label>
         <input
           type="text"
-          placeholder="Holliday Dentistry"
+          placeholder="company name"
           className={styles.formInput}
           autoComplete="organization"
           {...register("company", { required: false })}
@@ -89,16 +90,16 @@ const ContactForm: React.FC = () => {
           Details*
         </label>
         <textarea
-          rows={5}
-          placeholder="Any additional details you would like to share."
+          rows={4}
+          placeholder="additional details"
           className={styles.formInputDetails}
-          {...register("details", { required: true })}
+          {...register("details", { required: false })}
         ></textarea>
       </div>
       <div>
         <button
           className={`${styles.button} ${
-            !isValid ? styles.buttonInactive : ""
+            !isValid ? styles.buttonInactive : styles.buttonActive
           }`}
           disabled={isSubmitSuccessful}
         >

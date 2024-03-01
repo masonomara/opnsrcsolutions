@@ -1,15 +1,26 @@
 .formWrapper {
   width: 100%;
-  padding: 0px 24px;
   display: flex;
   flex-direction: column;
   gap: 28px;
+  max-width: 380px;
+  height: 100% !important;
+  min-height: 100% !important;
+  justify-content: flex-start;
 }
 .labelWrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 0px;
+}
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 4px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  line-height: 90%;
 }
 .formHeader {
   font-family: monospace !important;
@@ -22,8 +33,87 @@
 .formInput {
   border-radius: 0px !important;
   border: none !important;
+  stroke: none !important;
+  outline: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
   background-color: transparent;
   font-size: 16px;
-  padding: 4px 0px;
+  height: 36px;
+  transition: 100ms ease-out all;
+}
+.formInput:focus {
+  border-radius: 0px !important;
+  border: none !important;
+  stroke: none !important;
+  outline: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 1) !important;
+  background-color: transparent;
+  font-size: 16px;
+  height: 36px;
+  transition: 100ms ease-in all;
+}
+.formInputDetails {
+  border-radius: 0px !important;
+  border: none !important;
+  stroke: none !important;
+  outline: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 4px !important;
+  margin-top: 8px;
+  padding: 8px;
+  transition: 100ms ease-out all;
+  font-family: inherit !important;
+}
+.formInputDetails:focus {
+  border: 1px solid rgba(255, 255, 255, 1) !important;
+
+  transition: 100ms ease-in all;
+}
+.button {
+  height: 42px;
+  width: 100%;
+  border-radius: 9px;
+  stroke: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #000;
+  background-color: #dedede;
+  transition: 100ms ease-out all;
+  box-shadow: 0px 2px 20px -10px #dedede;
+}
+.buttonActive:hover {
+  height: 42px;
+  width: 100%;
+  border-radius: 9px;
+  stroke: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #000;
+  background-color: #dedede;
+  transition: 200ms ease-in all;
+  opacity: 0.87;
+  box-shadow: 0px 2px 20px -10px #dedede;
+}
+.buttonInactive {
+  cursor: not-allowed;
+  opacity: 0.4;
+  box-shadow: none;
+  transition: 100ms ease-in all;
+}
+
+@media screen and (min-width: 1026px) {
 }

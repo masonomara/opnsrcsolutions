@@ -22,6 +22,12 @@ export default function Home() {
           }`}
         >
           <ContactForm />
+          <div
+            onClick={() => setDarkMenu(!darkMenu)}
+            className={styles.closeButton}
+          >
+            Exit
+          </div>
         </div>
       </div>
       <video
@@ -61,19 +67,15 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.infoWrapper}>
-          <div className={styles.infoContainer}>
+          <div className={`${styles.infoContainer}  ${styles.infoLinkMobile}`}>
             <p className={styles.infoTitle}>Contact</p>
             <div
-              className={styles.infoLink}
+              className={`${styles.infoLink}`}
               onClick={() => setDarkMenu(!darkMenu)}
             >
               Email Us &gt;
             </div>
-            <p className={styles.infoSub}>
-              Portfolio available
-              <br />
-              by request.
-            </p>
+            <p className={styles.infoSub}>Portfolio available by request.</p>
           </div>
           <div className={styles.infoContainer}>
             <p className={styles.infoTitle}>Focuses</p>
@@ -82,11 +84,32 @@ export default function Home() {
               Software Development
               <br />
               User Experience Design
-              <br />
+              <span className={styles.infoLinkMobile}>
+                <br />
+                Mobile and Web Apps
+                <br />
+                E-Commerce Solutions
+              </span>
+            </p>
+          </div>
+          <div
+            className={`${styles.infoContainer} ${styles.infoContainerSecondary}`}
+          >
+            <p className={`${styles.infoTitle} ${styles.infoTitleSecondary}`}>
+              Focuses
+            </p>
+
+            <p className={styles.infoMain}>
               Mobile and Web Apps
               <br />
               E-Commerce Solutions
             </p>
+          </div>
+          <div
+            className={styles.infoLinkDesktop}
+            onClick={() => setDarkMenu(!darkMenu)}
+          >
+            Email Us
           </div>
         </div>
       </div>
