@@ -46,6 +46,6 @@ async function POST(request: { json: () => Promise<any> }) {
   }
 }
 
-export default {
+module.exports = {
   POST,
 };
