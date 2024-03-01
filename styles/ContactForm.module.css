@@ -14,9 +14,9 @@
 .formHeader {
   font-family: monospace !important;
   text-align: left;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 115%;
-
+  color: #ffffff;
   text-transform: uppercase;
 }
 .formInput {
