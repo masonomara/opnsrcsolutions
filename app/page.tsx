@@ -62,7 +62,6 @@ export default function Home() {
           <div className={styles.desktopTitle}>
             <h1 className={styles.logoTitle}>OpenSource Solutions</h1>
             <p className={styles.subtitle}>
-              Innovative software solutions available for work March 2024.
               Design and Technology solutions available for work March 2024.
             </p>
           </div>

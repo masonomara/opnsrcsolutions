@@ -310,7 +310,7 @@
   .desktopTitle {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    width: 224px;
   }
   .logoTitle,
   .subtitle {
