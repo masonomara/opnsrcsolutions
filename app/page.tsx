@@ -53,7 +53,7 @@ export default function Home() {
             Solutions
           </h1>
           <p className={styles.subtitle}>
-            Innovative software
+            Design and technology
             <br />
             solutions available for
             <br />
@@ -63,6 +63,7 @@ export default function Home() {
             <h1 className={styles.logoTitle}>OpenSource Solutions</h1>
             <p className={styles.subtitle}>
               Innovative software solutions available for work March 2024.
+              Design and Technology solutions available for work March 2024.
             </p>
           </div>
         </div>
