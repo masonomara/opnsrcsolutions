@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
-      default: "OpenSource Solutions",
-      template: "OpenSource Solutions | %s",
+      default: "Open Source Solutions",
+      template: "Open Source Solutions | %s",
     },
     metadataBase: new URL("https://opnsrcsolutions.com/"),
     icons: {

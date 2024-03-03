@@ -48,7 +48,7 @@ export default function Home() {
             <Image src="/oss.png" alt="OSS" fill />
           </div>
           <h1 className={styles.logoTitle}>
-            OpenSource
+            Open Source
             <br />
             Solutions
           </h1>
@@ -60,7 +60,7 @@ export default function Home() {
             work March 2024.
           </p>
           <div className={styles.desktopTitle}>
-            <h1 className={styles.logoTitle}>OpenSource Solutions</h1>
+            <h1 className={styles.logoTitle}>Open Source Solutions</h1>
             <p className={styles.subtitle}>
               Design and Technology solutions available for work March 2024.
             </p>
