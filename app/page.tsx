@@ -55,14 +55,14 @@ export default function Home() {
           <p className={styles.subtitle}>
             Technology and design
             <br />
-            solutions available for
+            solutions. Available for
             <br />
-            work March 2024.
+            work May 2024.
           </p>
           <div className={styles.desktopTitle}>
             <h1 className={styles.logoTitle}>Open Source Solutions</h1>
             <p className={styles.subtitle}>
-              Technology and Design solutions available for work March 2024.
+              Technology and Design solutions. Available for work May 2024.
             </p>
           </div>
         </div>
