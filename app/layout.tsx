@@ -17,10 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
       icon: "icon.ico",
     },
     description:
-      "Software solutions agency available for work May 2024. Scope includes design and development of apps, websites, e-commerce.",
+      "Software solutions agency available for work June 2024. Scope includes design and development of apps, websites, e-commerce.",
     openGraph: {
       description:
-        "Software solutions agency available for work May 2024. Scope includes design and development of apps, websites, e-commerce.",
+        "Software solutions agency available for work June 2024. Scope includes design and development of apps, websites, e-commerce.",
       images: [
         {
           url: "/social.png",

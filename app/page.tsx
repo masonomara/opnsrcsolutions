@@ -57,12 +57,12 @@ export default function Home() {
             <br />
             solutions. Available for
             <br />
-            work May 2024.
+            work June 2024.
           </p>
           <div className={styles.desktopTitle}>
             <h1 className={styles.logoTitle}>Open Source Solutions</h1>
             <p className={styles.subtitle}>
-              Technology and Design solutions. Available for work May 2024.
+              Technology and Design solutions. Available for work June 2024.
             </p>
           </div>
         </div>
